@@ -233,7 +233,7 @@ public class Simulator extends Application {
         gc.setFill(Color.WHITE.deriveColor(1, 1, 1, 0.2));
         gc.fillRect(0, 0, gridSize, gridSize);
         gc.strokeRect(0.5, 0.5, gridSize, gridSize);
-
+        
         Image image = canvas.snapshot(new SnapshotParameters(), null);
         ImagePattern pattern = new ImagePattern(image, 0, 0, gridSize, gridSize, false);
 
@@ -336,6 +336,7 @@ public class Simulator extends Application {
 
     private void addObstacle(Pane arenaPane, int x, int y, IMAGE_DIRECTION dir) {
         boolean success = arena.addPictureObstacle(x, y, dir);
+        
         if (success) {
             Obstacle obs = new Obstacle(x, y, dir);
             obs.addToPane(arenaPane);
@@ -347,6 +348,7 @@ public class Simulator extends Application {
         Rectangle obstacle;
         Rectangle indicator;
         Label idLabel;
+
 
         //StackPane stack;
         public Obstacle(int x, int y, IMAGE_DIRECTION dir) {

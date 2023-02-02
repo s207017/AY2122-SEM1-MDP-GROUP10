@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ReedsSheppCurves",
+            "request": "launch",
+            "mainClass": "ReedsSheppCurves.ReedsSheppCurves",
+            "projectName": "algorithm_66f3a051"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}",
